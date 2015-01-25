@@ -165,6 +165,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{CD618014-762A-498B-A86C-FE8CF40D109E}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common.Interfaces\Common.Interfaces.csproj">
       <Project>{34B603F4-F658-43FE-8E92-9BB812673050}</Project>
       <Name>Common.Interfaces</Name>

@@ -12,10 +12,11 @@ namespace Albreca.Web
 {
     public class WindsorInstaller : IWindsorInstaller
     {
-        private List<Type> _typesToRegister = new List<Type>()
+        private readonly List<Type> _typesToRegister = new List<Type>()
         {
             typeof(IBusinessLogic),
-            typeof(IRepository)
+            typeof(IRepository<>),
+            typeof(IService)
         };
 
         public void Install(IWindsorContainer container, IConfigurationStore store)
@@ -24,13 +25,15 @@ namespace Albreca.Web
                                 .BasedOn<IController>()
                                 .LifestyleTransient());
 
-            container.Register(Types
-                              .FromAssemblyInDirectory(new AssemblyFilter(AssemblyDirectory))
-                              .Pick()
-                              .If(x => _typesToRegister.Contains(x))
-                              .WithService
-                              .FirstInterface()
-                              .LifestylePerWebRequest());
+            foreach (var type in _typesToRegister)
+            {
+                container.Register(Types
+                            .FromAssemblyInDirectory(new AssemblyFilter(AssemblyDirectory))
+                           .BasedOn(type)
+                            .WithService
+                            .FromInterface()
+                            .LifestylePerWebRequest());
+            }
         }
 
         static public string AssemblyDirectory
