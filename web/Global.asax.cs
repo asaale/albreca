@@ -9,11 +9,8 @@ using System.Web.Routing;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 
-namespace web
+namespace Albreca.Web
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
-
     public class MvcApplication : System.Web.HttpApplication
     {
         private static IWindsorContainer container;
@@ -33,7 +30,8 @@ namespace web
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            MvcApplication.BootstrapContainer();
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BootstrapContainer();
         }
 
         protected void Application_End()

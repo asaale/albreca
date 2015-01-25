@@ -1,0 +1,18 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    @Styles.Render("~/bundles/styles")
+    @Scripts.Render("~/bundles/scripts/jquery")
+    @Scripts.Render("~/bundles/scripts/angular")
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/scripts/bootstrap")
+</body>
+</html>
