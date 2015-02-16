@@ -131,7 +131,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsIsBundleSorter.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="WindsorInstaller.cs" />
     <Compile Include="Global.asax.cs">
@@ -145,7 +147,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\Fonts\Libs\Bootstrap\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\Scripts\Custom\app.js" />
+    <Content Include="Content\Partials\navigation.html" />
+    <Content Include="Content\Scripts\Custom\Angular\app.js" />
+    <Content Include="Content\Scripts\Custom\Angular\navigation.js" />
+    <Content Include="Content\Scripts\Custom\Angular\routes.js" />
     <Content Include="Content\Scripts\Custom\Kanzi\activeaxon_menu.js" />
     <Content Include="Content\Scripts\Custom\Kanzi\animationEnigne.js" />
     <Content Include="Content\Scripts\Custom\Kanzi\bootstrap.min.js" />
@@ -510,6 +515,8 @@
     <Content Include="Content\Styles\Libs\Kanzi\tipsy.css" />
     <Content Include="Content\Styles\Libs\Kanzi\_colorpicker.css" />
     <Content Include="Global.asax" />
+    <Content Include="Content\Scripts\Libs\Angular\angular-ui-router.js" />
+    <Content Include="scripts\angular-ui-router.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

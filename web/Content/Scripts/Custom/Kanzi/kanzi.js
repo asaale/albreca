@@ -100,11 +100,7 @@ jQuery(document).ready(function($) {
     });
 
 
-    $('.navigation').AXMenu({
-        showArrowIcon: true, // true for showing the menu arrow, false for hide them
-        firstLevelArrowIcon: '',
-        menuArrowIcon: ""
-    });
+
 
 
     /* Mobile Nav */

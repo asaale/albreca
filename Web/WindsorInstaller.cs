@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Web.Http.Controllers;
 using System.Web.Mvc;
 using Albreca.Common.Interfaces.Marker;
 using Castle.MicroKernel.Registration;
@@ -23,6 +24,9 @@ namespace Albreca.Web
         {
             container.Register(Classes.FromThisAssembly()
                                 .BasedOn<IController>()
+                                .LifestyleTransient());
+            container.Register(Classes.FromThisAssembly()
+                                .BasedOn<IHttpController>()
                                 .LifestyleTransient());
 
             foreach (var type in _typesToRegister)
