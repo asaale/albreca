@@ -147,8 +147,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\Fonts\Libs\Bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Partials\bannerSlider.html" />
     <Content Include="Content\Partials\navigation.html" />
+    <Content Include="Content\Partials\social.html" />
     <Content Include="Content\Scripts\Custom\Angular\app.js" />
+    <Content Include="Content\Scripts\Custom\Angular\bannerSlider.js" />
+    <Content Include="Content\Scripts\Custom\Angular\social.js" />
     <Content Include="Content\Scripts\Custom\Angular\navigation.js" />
     <Content Include="Content\Scripts\Custom\Angular\routes.js" />
     <Content Include="Content\Scripts\Custom\Kanzi\activeaxon_menu.js" />
